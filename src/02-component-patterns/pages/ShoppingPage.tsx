@@ -22,7 +22,11 @@ const products: Product[] = [product1, product2];
 
 // Main Component
 export const ShoppingPage = () => {
-  const [shoppingCart, setshoppingCart] = useState("");
+  const [shoppingCart, setshoppingCart] = useState({
+    "1": { ...product1, count: 10 },
+    "2": { ...product2, count: 10 },
+  });
+  console.log(shoppingCart);
   return (
     <div>
       <h1>Shopping Store</h1>
