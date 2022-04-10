@@ -35,7 +35,7 @@ export const ShoppingPage = () => {
         {products.map((product) => {
           return (
             <ProductCard
-              product={product2}
+              product={product}
               className="bg-dark text-white"
               key={product.id}
             >
