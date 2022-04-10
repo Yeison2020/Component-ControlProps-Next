@@ -11,6 +11,11 @@ const product = {
   title: "Coffee Mug - Card",
   img: "./coffee-mug.png",
 };
+const product2 = {
+  id: "2",
+  title: "Coffee Mug - Card 2",
+  img: "./coffee-mug2.png",
+};
 
 export const ShoppingPage = () => {
   return (
@@ -31,7 +36,7 @@ export const ShoppingPage = () => {
           <ProductCard.Buttons className="custom-buttons" />
         </ProductCard>
 
-        <ProductCard product={product} className="bg-dark text-white">
+        <ProductCard product={product2} className="bg-dark text-white">
           <ProductImage
             className="custom-image"
             style={{ boxShadow: "10px 10px 10px rgba(0,0,0,0.2)" }}
