@@ -6,6 +6,7 @@ import {
 } from "../components";
 import "../styles/custom-styles.css";
 import { Product } from "../interfaces/interfaces";
+import { useState } from "react";
 
 const product1 = {
   id: "1",
@@ -17,9 +18,11 @@ const product2 = {
   title: "Coffee Mug - Meme",
   img: "./coffee-mug2.png",
 };
-
 const products: Product[] = [product1, product2];
+
+// Main Component
 export const ShoppingPage = () => {
+  const [shoppingCart, setshoppingCart] = useState("");
   return (
     <div>
       <h1>Shopping Store</h1>
