@@ -19,7 +19,7 @@ const product2 = {
   img: "./coffee-mug2.png",
 };
 const products: Product[] = [product1, product2];
-
+interface ProductInCart extends Product {}
 // Main Component
 export const ShoppingPage = () => {
   const [shoppingCart, setshoppingCart] = useState({
