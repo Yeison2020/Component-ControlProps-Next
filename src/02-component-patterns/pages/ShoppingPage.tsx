@@ -13,7 +13,7 @@ const product = {
 };
 const product2 = {
   id: "2",
-  title: "Coffee Mug - Card 2",
+  title: "Coffee Mug - Meme",
   img: "./coffee-mug2.png",
 };
 
