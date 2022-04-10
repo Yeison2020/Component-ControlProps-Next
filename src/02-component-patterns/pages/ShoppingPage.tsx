@@ -32,14 +32,22 @@ export const ShoppingPage = () => {
           flexWrap: "wrap",
         }}
       >
-        <ProductCard product={product2} className="bg-dark text-white">
-          <ProductImage
-            className="custom-image"
-            style={{ boxShadow: "10px 10px 10px rgba(0,0,0,0.2)" }}
-          />
-          <ProductTitle className="text-bold" />
-          <ProductButtons className="custom-buttons" />
-        </ProductCard>
+        {products.map((product) => {
+          return (
+            <ProductCard
+              product={product2}
+              className="bg-dark text-white"
+              key={product.id}
+            >
+              <ProductImage
+                className="custom-image"
+                style={{ boxShadow: "10px 10px 10px rgba(0,0,0,0.2)" }}
+              />
+              <ProductTitle className="text-bold" />
+              <ProductButtons className="custom-buttons" />
+            </ProductCard>
+          );
+        })}
       </div>
     </div>
   );
