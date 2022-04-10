@@ -19,7 +19,11 @@ const product2 = {
   img: "./coffee-mug2.png",
 };
 const products: Product[] = [product1, product2];
-interface ProductInCart extends Product {}
+
+// Im using my Product Interface and extending It's  values from Products and adding another new Value Counter
+interface ProductInCart extends Product {
+  counter: number;
+}
 // Main Component
 export const ShoppingPage = () => {
   const [shoppingCart, setshoppingCart] = useState({
