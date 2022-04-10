@@ -5,8 +5,9 @@ import {
   ProductButtons,
 } from "../components";
 import "../styles/custom-styles.css";
+import { Product } from "../interfaces/interfaces";
 
-const product = {
+const product1 = {
   id: "1",
   title: "Coffee Mug - Card",
   img: "./coffee-mug.png",
@@ -17,6 +18,7 @@ const product2 = {
   img: "./coffee-mug2.png",
 };
 
+const products: Product[] = [product1, product2];
 export const ShoppingPage = () => {
   return (
     <div>
@@ -30,12 +32,6 @@ export const ShoppingPage = () => {
           flexWrap: "wrap",
         }}
       >
-        <ProductCard product={product} className="bg-dark text-white">
-          <ProductCard.Image className="custom-image" />
-          <ProductCard.Title className="text-bold" />
-          <ProductCard.Buttons className="custom-buttons" />
-        </ProductCard>
-
         <ProductCard product={product2} className="bg-dark text-white">
           <ProductImage
             className="custom-image"
