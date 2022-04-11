@@ -5,14 +5,15 @@ interface useProductArgs {
   product: Product;
   onChange: (args: onChangeArgs) => void;
 }
-export const useProduct = ({ onChange }: useProductArgs) => {
+export const useProduct = ({ onChange, product }: useProductArgs) => {
   const [counter, setCounter] = useState(0);
 
   const increaseBy = (value: number) => {
-    setCounter((prev) => Math.max(prev + value, 0));
+    const newValue = Math.max(counter + value, 0);
+    setCounter(newValue);
 
     // Check this syntax Great way to handle some conditions
-    onChange && onChange();
+    onChange && onChange({ count: newValue, product });
   };
 
   return {
