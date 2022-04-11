@@ -3,7 +3,7 @@ import { Product, onChangeArgs } from "../interfaces/interfaces";
 
 interface useProductArgs {
   product: Product;
-  onChange: (args: onChangeArgs) => void;
+  onChange?: (args: onChangeArgs) => void;
 }
 export const useProduct = ({ onChange, product }: useProductArgs) => {
   const [counter, setCounter] = useState(0);
