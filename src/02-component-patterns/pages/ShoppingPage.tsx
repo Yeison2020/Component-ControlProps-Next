@@ -61,7 +61,7 @@ export const ShoppingPage = () => {
               product={product}
               className="bg-dark text-white"
               key={product.id}
-              onChange={(e) => onProductCountChange(e)}
+              onChange={onProductCountChange}
             >
               <ProductImage
                 className="custom-image"
