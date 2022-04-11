@@ -13,7 +13,7 @@ export interface Props {
   children?: React.ReactElement | React.ReactElement[];
   className?: string;
   style?: React.CSSProperties;
-  onChange?: () => void;
+  onChange?: (product: Product, count: number) => void;
 }
 
 export const ProductCard = ({
