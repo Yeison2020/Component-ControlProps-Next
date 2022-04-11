@@ -33,8 +33,14 @@ export const ShoppingPage = () => {
     "2": { ...product2, counter: 10 },
   });
 
-  const onProductCountChange = (e: any) => {
-    console.log("On Product Count Change", e);
+  const onProductCountChange = ({
+    count,
+    product,
+  }: {
+    count: number;
+    product: Product;
+  }) => {
+    console.log("On Product Count Change", count, product);
   };
   console.log(shoppingCart);
   return (
