@@ -1,11 +1,13 @@
 import { useState } from "react";
 
-export const useProduct = (onChange: () => void) => {
+export const useProduct = (onChange?: () => void) => {
   const [counter, setCounter] = useState(0);
 
   const increaseBy = (value: number) => {
     setCounter((prev) => Math.max(prev + value, 0));
-    onChange();
+
+    // Check this syntax Great way to handle some conditions
+    onChange && onChange();
   };
 
   return {
