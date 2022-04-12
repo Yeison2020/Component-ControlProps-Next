@@ -99,6 +99,9 @@ export const ShoppingPage = () => {
           <ProductButtons className="custom-buttons" />
         </ProductCard>
       </div>
+      <div>
+        <code>{JSON.stringify(shoppingCart, null, 5)}</code>
+      </div>
     </div>
   );
 };
