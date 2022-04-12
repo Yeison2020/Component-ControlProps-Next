@@ -22,15 +22,15 @@ const products: Product[] = [product1, product2];
 
 // Im using my Product Interface and extending It's  values from Products and adding another new Value Counter
 interface ProductInCart extends Product {
-  counter: number;
+  count: number;
 }
 // Main Component
 export const ShoppingPage = () => {
   const [shoppingCart, setshoppingCart] = useState<{
     [key: string]: ProductInCart;
   }>({
-    "1": { ...product1, counter: 10 },
-    "2": { ...product2, counter: 10 },
+    "1": { ...product1, count: 10 },
+    "2": { ...product2, count: 10 },
   });
 
   const onProductCountChange = ({
@@ -40,6 +40,15 @@ export const ShoppingPage = () => {
     count: number;
     product: Product;
   }) => {
+    setshoppingCart((oldShoppingCart) => {
+      return {
+        ...oldShoppingCart,
+        [product.id]: {
+          ...product,
+          count,
+        },
+      };
+    });
     console.log("On Product Count", count, product);
   };
   console.log(shoppingCart);
