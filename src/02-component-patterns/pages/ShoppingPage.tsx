@@ -38,6 +38,9 @@ export const ShoppingPage = () => {
     product: Product;
   }) => {
     setshoppingCart((oldShoppingCart) => {
+      if (count === 0) {
+        return {};
+      }
       return {
         ...oldShoppingCart,
         [product.id]: {
