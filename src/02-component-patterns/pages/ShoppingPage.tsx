@@ -40,7 +40,7 @@ export const ShoppingPage = () => {
     count: number;
     product: Product;
   }) => {
-    console.log("On Product Count Change", count, product);
+    console.log("On Product Count", count, product);
   };
   console.log(shoppingCart);
   return (
