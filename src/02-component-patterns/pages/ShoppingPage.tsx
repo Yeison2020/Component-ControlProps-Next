@@ -39,7 +39,8 @@ export const ShoppingPage = () => {
   }) => {
     setshoppingCart((oldShoppingCart) => {
       if (count === 0) {
-        return {};
+        const { [product.id]: toDelete, ...rest } = oldShoppingCart;
+        return { ...rest };
       }
       return {
         ...oldShoppingCart,
