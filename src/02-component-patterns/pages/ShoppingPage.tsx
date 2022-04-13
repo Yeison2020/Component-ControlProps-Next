@@ -39,6 +39,7 @@ export const ShoppingPage = () => {
   }) => {
     setshoppingCart((oldShoppingCart) => {
       if (count === 0) {
+        // Renaming here
         const { [product.id]: toDelete, ...rest } = oldShoppingCart;
         return { ...rest };
       }
