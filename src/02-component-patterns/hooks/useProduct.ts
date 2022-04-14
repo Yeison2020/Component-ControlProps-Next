@@ -4,8 +4,9 @@ import { Product, onChangeArgs } from "../interfaces/interfaces";
 interface useProductArgs {
   product: Product;
   onChange?: (args: onChangeArgs) => void;
+  value?: number;
 }
-export const useProduct = ({ onChange, product }: useProductArgs) => {
+export const useProduct = ({ onChange, product, value }: useProductArgs) => {
   const [counter, setCounter] = useState(0);
 
   const increaseBy = (value: number) => {
