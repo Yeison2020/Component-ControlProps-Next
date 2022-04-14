@@ -6,8 +6,12 @@ interface useProductArgs {
   onChange?: (args: onChangeArgs) => void;
   value?: number;
 }
-export const useProduct = ({ onChange, product, value }: useProductArgs) => {
-  const [counter, setCounter] = useState(0);
+export const useProduct = ({
+  onChange,
+  product,
+  value = 0,
+}: useProductArgs) => {
+  const [counter, setCounter] = useState(value);
 
   const increaseBy = (value: number) => {
     const newValue = Math.max(counter + value, 0);
