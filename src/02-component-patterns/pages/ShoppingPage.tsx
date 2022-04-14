@@ -93,11 +93,11 @@ export const ShoppingPage = () => {
             className="bg-dark text-white"
             style={{ width: "100px" }}
           >
-            <ProductTitle className="text-bold" title={`${product.count}`} />
             <ProductImage
               className="custom-image"
               style={{ boxShadow: "10px 10px 10px rgba(0,0,0,0.2)" }}
             />
+            <ProductTitle className="text-bold" title={`${product.count}`} />
             {/* <ProductTitle className="text-bold" /> */}
             <ProductButtons
               className="custom-buttons"
