@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Product, onChangeArgs } from "../interfaces/interfaces";
 
 interface useProductArgs {
@@ -20,7 +20,9 @@ export const useProduct = ({
     // Check this syntax Great way to handle some conditions
     onChange && onChange({ count: newValue, product });
   };
-
+  useEffect(() => {
+    setCounter(value);
+  }, [value]);
   return {
     counter,
     increaseBy,
