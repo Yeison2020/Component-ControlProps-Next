@@ -68,6 +68,7 @@ export const ShoppingPage = () => {
         }}
       >
         {products.map((product) => {
+          console.log(product);
           return (
             <ProductCard
               product={product}
