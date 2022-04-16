@@ -67,7 +67,7 @@ export const ShoppingPage = () => {
           flexWrap: "wrap",
         }}
       >
-        {Object.entries(shoppingCart).map(([key, product]) => {
+        {products.map((product) => {
           console.log(product);
           return (
             <ProductCard
@@ -88,7 +88,6 @@ export const ShoppingPage = () => {
       </div>
       <div className="shopping-cart">
         {Object.entries(shoppingCart).map(([key, product]) => {
-          console.log(product);
           return (
             <ProductCard
               key={key}
