@@ -67,7 +67,7 @@ export const ShoppingPage = () => {
           flexWrap: "wrap",
         }}
       >
-        {products.map((product) => {
+        {Object.entries(shoppingCart).map(([key, product]) => {
           console.log(product);
           return (
             <ProductCard
@@ -87,26 +87,29 @@ export const ShoppingPage = () => {
         })}
       </div>
       <div className="shopping-cart">
-        {Object.entries(shoppingCart).map(([key, product]) => (
-          <ProductCard
-            key={key}
-            product={product}
-            className="bg-dark text-white"
-            style={{ width: "100px" }}
-            value={product.count}
-          >
-            <ProductImage
-              className="custom-image"
-              style={{ boxShadow: "10px 10px 10px rgba(0,0,0,0.2)" }}
-            />
-            <ProductTitle className="text-bold" title={`${product.count}`} />
-            {/* <ProductTitle className="text-bold" /> */}
-            <ProductButtons
-              className="custom-buttons"
-              style={{ display: "flex", justifyContent: "center" }}
-            />
-          </ProductCard>
-        ))}
+        {Object.entries(shoppingCart).map(([key, product]) => {
+          console.log(product);
+          return (
+            <ProductCard
+              key={key}
+              product={product}
+              className="bg-dark text-white"
+              style={{ width: "100px" }}
+              value={product.count}
+            >
+              <ProductImage
+                className="custom-image"
+                style={{ boxShadow: "10px 10px 10px rgba(0,0,0,0.2)" }}
+              />
+              <ProductTitle className="text-bold" title={`${product.count}`} />
+              {/* <ProductTitle className="text-bold" /> */}
+              <ProductButtons
+                className="custom-buttons"
+                style={{ display: "flex", justifyContent: "center" }}
+              />
+            </ProductCard>
+          );
+        })}
       </div>
     </div>
   );
