@@ -94,6 +94,7 @@ export const ShoppingPage = () => {
               product={product}
               className="bg-dark text-white"
               style={{ width: "100px" }}
+              onChange={() => onProductCountChange}
               value={product.count}
             >
               <ProductImage
