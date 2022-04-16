@@ -26,5 +26,6 @@ export const useProduct = ({
   return {
     counter,
     increaseBy,
+    value,
   };
 };
