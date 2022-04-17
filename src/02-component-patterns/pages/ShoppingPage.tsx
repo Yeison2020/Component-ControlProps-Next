@@ -29,7 +29,7 @@ export const ShoppingPage = () => {
   const [shoppingCart, setshoppingCart] = useState<{
     [key: string]: ProductInCart;
   }>({});
-  console.log(shoppingCart, "Printing my current Cart");
+  // console.log(shoppingCart, "Printing my current Cart");
 
   const onProductCountChange = ({
     count,
