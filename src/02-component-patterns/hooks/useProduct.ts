@@ -12,7 +12,7 @@ export const useProduct = ({
   value = 0,
 }: useProductArgs) => {
   const [counter, setCounter] = useState(value);
-  const isControlled = useRef(false);
+  const isControlled = useRef(!!onChange);
 
   const increaseBy = (value: number) => {
     const newValue = Math.max(counter + value, 0);
