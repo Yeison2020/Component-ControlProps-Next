@@ -29,7 +29,7 @@ export const ShoppingPage = () => {
   const [shoppingCart, setshoppingCart] = useState<{
     [key: string]: ProductInCart;
   }>({});
-  console.log(shoppingCart);
+  console.log(shoppingCart, "Printing my current Cart");
 
   const onProductCountChange = ({
     count,
@@ -38,6 +38,7 @@ export const ShoppingPage = () => {
     count: number;
     product: Product;
   }) => {
+    console.log({ count });
     setshoppingCart((oldShoppingCart) => {
       if (count === 0) {
         // Renaming here
