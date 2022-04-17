@@ -53,9 +53,8 @@ export const ShoppingPage = () => {
         },
       };
     });
-    console.log("On Product Count", count, product);
   };
-  console.log(shoppingCart);
+
   return (
     <div>
       <h1>Shopping Store</h1>
@@ -69,7 +68,6 @@ export const ShoppingPage = () => {
         }}
       >
         {products.map((product) => {
-          console.log(product);
           return (
             <ProductCard
               product={product}
