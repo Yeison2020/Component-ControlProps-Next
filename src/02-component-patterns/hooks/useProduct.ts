@@ -15,6 +15,7 @@ export const useProduct = ({
   const isControlled = useRef(!!onChange);
 
   const increaseBy = (value: number) => {
+    console.log("IsControlled", isControlled.current);
     const newValue = Math.max(counter + value, 0);
     setCounter(newValue);
 
