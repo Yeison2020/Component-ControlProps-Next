@@ -47,6 +47,10 @@ export const ShoppingPage = () => {
 
       if (Math.max(productInCart.count + count, 0)) {
         productInCart.count += count;
+        return {
+          ...oldShoppingCart,
+          [product.id]: productInCart,
+        };
       }
 
       // if (count === 0) {
