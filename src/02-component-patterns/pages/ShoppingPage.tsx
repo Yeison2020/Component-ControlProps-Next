@@ -40,6 +40,8 @@ export const ShoppingPage = () => {
   }) => {
     console.log({ count });
     setshoppingCart((oldShoppingCart) => {
+      const productInCart: ProductInCart = oldShoppingCart[product.id];
+
       // if (count === 0) {
       //   // Renaming here
       //   const { [product.id]: toDelete, ...rest } = oldShoppingCart;
