@@ -16,10 +16,10 @@ export const useProduct = ({
 
   const increaseBy = (value: number) => {
     // console.log("IsControlled", isControlled.current);
-    // if (isControlled.current) {
-    //   // Notes when adding the ! infront mean that I'm telling typescript that the value will always be defined and no undefined because It optionla in the props values.
-    //   return onChange!({ count: value, product });
-    // }
+    if (isControlled.current) {
+      // Notes when adding the ! infront mean that I'm telling typescript that the value will always be defined and no undefined because It optionla in the props values.
+      return onChange!({ count: value, product });
+    }
 
     const newValue = Math.max(counter + value, 0);
     setCounter(newValue);
