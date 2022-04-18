@@ -45,6 +45,10 @@ export const ShoppingPage = () => {
         count: 0,
       };
 
+      if (Math.max(productInCart.count + count, 0)) {
+        productInCart.count += count;
+      }
+
       // if (count === 0) {
       //   // Renaming here
       //   const { [product.id]: toDelete, ...rest } = oldShoppingCart;
