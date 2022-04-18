@@ -53,11 +53,16 @@ export const ShoppingPage = () => {
         };
       }
 
+      // Delete the product
+
+      const { [product.id]: toDelete, ...rest } = oldShoppingCart;
+      return { ...rest };
+
       // if (count === 0) {
       //   // Renaming here
       //   const { [product.id]: toDelete, ...rest } = oldShoppingCart;
       //   return { ...rest };
-      // }
+      // // }
       // return {
       //   ...oldShoppingCart,
       //   [product.id]: {
